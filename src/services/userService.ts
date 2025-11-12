@@ -5,22 +5,14 @@ import type { UserService } from "@/types/iUserService.ts";
 
 export const userService: UserService = {
   async getProfile(): Promise<User> {
-    const response = await api.get(
-      import.meta.env.VITE_API_USER_ENDPOINT + "/auth"
-    );
+    const response = await api.get("User/auth");
     return response.data;
   },
   async register(data: RegisterUser) {
-    return await postRequest(
-      import.meta.env.VITE_API_USER_ENDPOINT + "/register",
-      data
-    );
+    return await postRequest("User/register", data);
   },
   async login(credentials: LoginUser) {
-    const response = await postRequest(
-      import.meta.env.VITE_API_USER_ENDPOINT + "/login",
-      credentials
-    );
+    const response = await postRequest("User/login", credentials);
     return response.data;
   },
 };

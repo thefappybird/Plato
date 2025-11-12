@@ -5,35 +5,25 @@ import type { RecipeService } from "@/types/iRecipeService.ts";
 
 const recipeService: RecipeService = {
   async getAllRecipes() {
-    const response = await api.get(
-      import.meta.env.VITE_API_RECIPE_ENDPOINT + "/dash-recipes"
-    );
+    const response = await api.get("Recipe/dash-recipes");
     return response.data;
   },
   async getRecipeById(id) {
-    const response = await api.get(
-      import.meta.env.VITE_API_RECIPE_ENDPOINT + `/get-recipe/${id}`
-    );
+    const response = await api.get(`Recipe/get-recipe/${id}`);
     return response.data;
   },
   async getFilteredRecipes(filter: RecipeFilter) {
-    const response = await postRequest(
-      import.meta.env.VITE_API_RECIPE_ENDPOINT + "/get-filtered-recipes",
-      filter
-    );
+    const response = await postRequest("Recipe/get-filtered-recipes", filter);
     return response.data;
   },
   async createRecipe(data: Recipe) {
-    const response = await postRequest(
-      import.meta.env.VITE_API_RECIPE_ENDPOINT + "/auth/create-recipe",
-      data
-    );
+    const response = await postRequest("Recipe/auth/create-recipe", data);
     return response.data;
   },
   async updateRecipe(id, data) {
     const formData = transformToFormData(data);
     const response = await api.put(
-      import.meta.env.VITE_API_RECIPE_ENDPOINT + `/auth/update-recipe/${id}`,
+      `Recipe/auth/update-recipe/${id}`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -42,9 +32,7 @@ const recipeService: RecipeService = {
     return response.data;
   },
   async deleteRecipe(id) {
-    const response = await api.delete(
-      import.meta.env.VITE_API_RECIPE_ENDPOINT + `/auth/delete-recipe/${id}`
-    );
+    const response = await api.delete(`Recipe/auth/delete-recipe/${id}`);
     return response.data;
   },
 };
