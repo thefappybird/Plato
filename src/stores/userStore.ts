@@ -48,6 +48,7 @@ export const useUserStore = defineStore("userStore", () => {
   function handleLogout() {
     token.value = null;
     sessionStorage.removeItem("token");
+    currentUser.value = null;
     router.push({ name: "home" });
   }
   async function getCurrentUser() {
