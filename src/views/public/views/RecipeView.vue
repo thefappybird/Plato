@@ -144,6 +144,9 @@ const imageUrl = computed((): string | undefined => {
 
   return undefined;
 });
+const title = computed(() =>
+  currentRecipe.value ? currentRecipe.value.title : "Recipe Not Found"
+);
 function onEditClick() {
   modalStore.toggleFormDrawer(true);
   recipeStore.toggleIsInteracting(recipeId.value);
@@ -179,25 +182,23 @@ onBeforeUnmount(() => {
   }
 });
 
-useHead({
-  title: currentRecipe.value
-    ? currentRecipe.value.title + " | Plato"
-    : "Recipe Not Found | Plato",
-  meta: [
-    {
-      name: "description",
-      content: currentRecipe.value
-        ? currentRecipe.value.description || "Delicious recipe on Plato."
-        : "The page you are looking for does not exist.",
-    },
-    {
-      property: "og:title",
-      content: currentRecipe.value
-        ? currentRecipe.value.title + " | Plato"
-        : "Recipe Not Found | Plato",
-    },
-  ],
-});
+useHead(
+  computed(() => ({
+    title: (currentRecipe.value?.title ?? "Recipe Not Found") + " | Plato",
+    meta: [
+      {
+        name: "description",
+        content:
+          (currentRecipe.value?.title ?? "Recipe Not Found") + " | Plato",
+      },
+      {
+        property: "og:title",
+        content:
+          (currentRecipe.value?.title ?? "Recipe Not Found") + " | Plato",
+      },
+    ],
+  }))
+);
 </script>
 
 <style scoped lang="scss">
