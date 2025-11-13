@@ -12,7 +12,9 @@
           Can't wait to get started? Click the button below to create your
           account and start planning your meals today!
         </p>
-        <button class="common-btn"><h5>Start Now</h5></button>
+        <router-link to="/register" class="common-btn"
+          ><h5>Start Now</h5></router-link
+        >
       </div>
     </div>
   </section>
@@ -57,7 +59,8 @@
     span {
       @include highlighted;
     }
-    button {
+    .common-btn {
+      text-align: center;
       width: 50%;
     }
   }
