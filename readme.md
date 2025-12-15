@@ -7,7 +7,10 @@ Visit PLATO here: 03-recipe-planner.vercel.app
 ---
 
 ## Tech Stack
-- **Frontend**: [![Vue][Vue.js]][Vue-url], TypeScript, SCSS
+- **Frontend**: 
+[![Vue][Vue.js]][Vue-url]
+[![TypeScript][TypeScript]][TS-url]
+[![SASS][Sass]][Sass-url]
 - **Backend**: .NET C# API
 - **Database**: MS SQL Server
 
@@ -83,3 +86,7 @@ Plato is a full-featured recipe management and exploration app, offering users t
 
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
+[TypeScript]: https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square
+[TS-url]: https://www.typescriptlang.org
+[Sass]: https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white
+[Sass-url]: https://sass-lang.com
