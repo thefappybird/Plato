@@ -7,14 +7,14 @@ Visit PLATO here: https://03-recipe-planner.vercel.app
 ---
 
 ## Tech Stack
-- **Frontend**:
+**Frontend**:
 - [![Vue][Vue.js]][Vue-url]
 - [![TypeScript][TypeScript]][TS-url]
 - [![SASS][Sass]][Sass-url]
-- **Backend**:
+**Backend**:
 - [![.NET 9][Dotnet]][Dotnet-url]
 - [![C#][C#]][C#-url]
-- **Database**:
+**Database**:
 - [![MSSQL][MSSQL]][MSSQL-url]
 
 ---
