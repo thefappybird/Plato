@@ -82,9 +82,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ---
 
-## Summary
-Plato is a full-featured recipe management and exploration app, offering users the ability to create, edit, delete, and explore recipes. With user authentication, a robust backend, and a modular frontend built with Vue.js and TypeScript, Plato ensures a secure and seamless experience for food enthusiasts.
-
 
 
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
